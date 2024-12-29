@@ -1,6 +1,7 @@
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Scanner;
 
 public class Main extends JFrame implements ActionListener {
     public static void main(String[] args) {
@@ -15,12 +16,33 @@ public class Main extends JFrame implements ActionListener {
         //класс для управления временем
         //взаимодействие с пользователем
         //это только черновик с наработками, поэтому бардак. уберусь
+        //Сделать список прочитанных книг и просмотренных курсов
 
         f.timeFixer();
         Main m = new Main();
+        ListKnowleg d = new ListKnowleg();
+        d.addBook(new String[]{});
+
 
 
     }
+    static class ListKnowleg{
+        String books = new Scanner(System.in).nextLine().trim();
+         String nameBook;
+
+        void addBook(String [] books){
+            books = new String[10];
+            for (int i = 0; i < books.length; i++){
+                books[i] = this.books;
+                if (books[i].equals(books[i])){
+                    continue;
+                }
+               //сохраним массив в файл
+            }
+
+        }
+    }
+
     public Main(){
         setTitle("Fix Learning");//это название программы будет видно вверху окна Windows
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);//Это крестик, чтоб закрыть окно
